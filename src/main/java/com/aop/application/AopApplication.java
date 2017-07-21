@@ -1,10 +1,10 @@
-package com.aop.application.aopapplication;
+package com.aop.application;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.aop.application.aopapplication.concert.Performance;
+import com.aop.application.concert.Performance;
 
 @SpringBootApplication
 public class AopApplication {

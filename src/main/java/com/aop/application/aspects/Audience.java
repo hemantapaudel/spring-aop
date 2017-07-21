@@ -1,4 +1,4 @@
-package com.aop.application.aopapplication.aspects;
+package com.aop.application.aspects;
 
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;

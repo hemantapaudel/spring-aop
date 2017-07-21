@@ -1,4 +1,4 @@
-package com.aop.application.aopapplication.concert;
+package com.aop.application.concert;
 
 public interface Performance {
 
