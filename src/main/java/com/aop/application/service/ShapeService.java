@@ -2,6 +2,7 @@ package com.aop.application.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.aop.application.aspect.Loggable;
 import com.aop.application.model.Circle;
 import com.aop.application.model.Triangle;
 
@@ -13,6 +14,7 @@ public class ShapeService {
 	@Autowired
 	private Triangle triangle;
 
+	@Loggable
 	public Circle getCircle() {
 		return circle;
 	}
