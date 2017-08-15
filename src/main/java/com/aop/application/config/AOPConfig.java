@@ -7,6 +7,7 @@ import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import com.aop.application.aspect.LoggerAspect;
 import com.aop.application.aspect.LoggerAspectAround;
 import com.aop.application.aspect.LoggerAspectWithArgs;
+import com.aop.application.aspect.LoggerAspectWithArgsWithOrder2;
 import com.aop.application.model.Circle;
 import com.aop.application.model.Triangle;
 import com.aop.application.service.ShapeService;
@@ -38,12 +39,18 @@ public class AOPConfig {
 		return new LoggerAspect();
 	}
 	
-	//@Bean
+	@Bean
 	LoggerAspectWithArgs loggerAspectWithArgs(){
 		return new LoggerAspectWithArgs();
 	}
 	
 	@Bean
+	LoggerAspectWithArgsWithOrder2 loggerAspectWithArgsWithOrder2(){
+		return new LoggerAspectWithArgsWithOrder2();
+	}
+	
+	
+	//@Bean
 	LoggerAspectAround loggerAspectAround(){
 		return new LoggerAspectAround();
 	}

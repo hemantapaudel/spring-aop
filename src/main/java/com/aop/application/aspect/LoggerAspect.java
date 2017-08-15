@@ -5,6 +5,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
+
 public class LoggerAspect {
 
 	//Applying Advice on all model classes getName methods
