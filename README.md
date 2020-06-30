@@ -1,7 +1,7 @@
 # spring-aop
 
 #What is AOP?
-
+ Spring AOP enables Aspect-Oriented Programming in spring applications.
  A cross-cutting concern is a concern that can affect the whole application and should be centralized in one location in code as possible, such as transaction management, authentication, logging, security etc.
  
  AOP provides the way to dynamically add the cross-cutting concern before, after or around the actual logic using simple pluggable configurations.

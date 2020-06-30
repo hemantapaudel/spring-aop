@@ -18,7 +18,7 @@ public class LoggerAspectAround {
 		
 		Object returnValue =null;
 		try {
-			System.out.println("Befor target Getter called");
+			System.out.println("Before target Getter called");
 			returnValue =  joinPoint.proceed();
 			System.out.println("After target Getter called");
 		} catch (Throwable e) {

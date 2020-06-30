@@ -1,7 +1,7 @@
 
 package com.aop.application.aspect;
 
-import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.*;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.core.annotation.Order;
@@ -21,8 +21,7 @@ public class LoggerAspectWithArgs {
 		System.out.println("@Before : a method take string argument called = "+name);
 	}
 	
-	
-	/**
+
 	@After("args(name)")
 	public void stringArgumentMethodAfter(String name){
 		System.out.println("@After : a method take string argument called = "+name);
@@ -41,6 +40,6 @@ public class LoggerAspectWithArgs {
 	@AfterReturning(pointcut ="args(name)", returning = "returnName")
 	public void stringArgumentMethodAfterReturn(String name,String returnName){
 		System.out.println("@AfterReturning : a method take string argument called =>> "+name + " return name=>>"+returnName);
-	}*/
+	}
 	
 }

@@ -25,7 +25,7 @@ public class LoggerAspectWithArgsWithOrder2 {
 		System.out.println("========allCircleMethodWhichTakesStringArgs=======");
 		System.out.println("LoggerAspect called for "+joinPoint.getTarget().getClass() + " name = "+ name );
 		System.out.println("LoggerAspect called for "+joinPoint.getClass() + " name = "+ name );
-		throw new RuntimeException("Throwing exception from Advice");
+		//throw new RuntimeException("Throwing exception from Advice");
 	}
 	
 }

@@ -39,12 +39,12 @@ public class AOPConfig {
 		return new LoggerAspect();
 	}
 	
-	@Bean
+	//@Bean
 	LoggerAspectWithArgs loggerAspectWithArgs(){
 		return new LoggerAspectWithArgs();
 	}
 	
-	@Bean
+	//@Bean
 	LoggerAspectWithArgsWithOrder2 loggerAspectWithArgsWithOrder2(){
 		return new LoggerAspectWithArgsWithOrder2();
 	}

@@ -5,12 +5,13 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-
 public class LoggerAspect {
 
 	//Applying Advice on all model classes getName methods
 	@Pointcut("execution(public String com.aop.application.model.*.get*())")
-	public void getAllGetters(){}
+	public void getAllGetters(){
+
+	}
 	
 	@Before("getAllGetters()")
 	public void loggerAdvice(){
