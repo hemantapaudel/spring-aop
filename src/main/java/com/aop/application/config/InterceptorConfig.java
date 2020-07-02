@@ -2,19 +2,25 @@
 package com.aop.application.config;
 
 
-import com.aop.application.security.ServiceInterceptor;
+import com.aop.application.security.UserServiceInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+
+/**
+ * this interceptor will only intercept user service
+ */
 @Component
-public class InterceptorAppConfig extends WebMvcConfigurerAdapter {
+public class InterceptorConfig extends WebMvcConfigurerAdapter {
     @Autowired
-    ServiceInterceptor productServiceInterceptor;
+    UserServiceInterceptor userServiceInterceptor;
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(productServiceInterceptor);
+        registry.addInterceptor(userServiceInterceptor)
+                .addPathPatterns("/userservice/*");
     }
 }
+

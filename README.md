@@ -50,3 +50,19 @@ Pointcut is a predicate or expression that matches join points.
 =>> Yes we can ordered the execution of advice execution
     1. we have to keep advice on seperated Aspect
     2. The Aspect can be ordered by implementing Ordered inteface or using @Order(2)
+
+
+
+#Spring-boot cache and ehcache Implementation
+We need to add Spring's @EnableCaching annotation to a Spring bean so that Spring's
+annotation-driven cache management is enabled.
+
+Spring's auto-configuration finds Ehcache's implementation of JSR-107. However, 
+no caches are created by default.
+
+@Cacheable  is added to this method,  So that Spring will handle the caching. As a result of
+  this annotation, Spring will create a proxy of the UserServiceImpl to intercept calls to the 
+  getUsers method and call Ehcache.
+
+
+ 

@@ -9,14 +9,27 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-public class ServiceInterceptor implements HandlerInterceptor {
+public class UserServiceInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle
             (HttpServletRequest request, HttpServletResponse response, Object handler)
             throws Exception {
 
         System.out.println("Pre Handle method is Calling");
+        Object contentType = request.getAttribute("acceptType");
+
+        System.out.println(contentType);
+
+
+        // we can break the request flow here base on request header attributes
+        /*if(contentType == null){
+            response.sendRedirect("/login");
+            return false;
+        }*/
         return true;
+
+
+
     }
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response,
