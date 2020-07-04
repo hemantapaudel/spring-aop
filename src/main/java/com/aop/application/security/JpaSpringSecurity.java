@@ -31,7 +31,7 @@ public class JpaSpringSecurity extends WebSecurityConfigurerAdapter {
 
         http.authorizeRequests()
                .antMatchers("/adminservice/").hasRole("ADMIN")
-                .antMatchers("/userservice/").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/userservice/", "/paymentservice/").hasAnyRole("ADMIN", "USER")
                 .antMatchers(allowURls).permitAll()
                 .and().formLogin();
 
